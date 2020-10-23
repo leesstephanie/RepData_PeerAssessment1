@@ -1,10 +1,3 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output:
-  html_document:
-    fig_caption: yes
-    keep_md: yes
----
 # Reproducible Research First Project
 
 
@@ -93,7 +86,7 @@ hist(one$total, breaks = 10, xlim = c(0,25000), xlab = "total steps",
      main = "Total number of steps taken per day", col="skyblue")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
 
 The frequency can be interpreted as the total days in which a range of total number of steps occur. The total frequency is 61.
 In the code, I set the `breaks` to be 10, so the first bar is for all total number of steps between 0 and 2000, the second bar is for all total number of steps between 2000 and 4000, and so on. Missing values are included in the leftmost bar.
@@ -136,7 +129,7 @@ with(two, plot(interval, avg, type= "l", ylab="average across all days",
 axis(1, at = axislbl*100, labels=as.character(axislbl))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
 
 ### Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps? 
 
@@ -230,7 +223,7 @@ hist(three$total, breaks = 10, xlim = c(0,25000), xlab = "total steps",
      main = "Total number of steps taken per day", col="green")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
 
 
 ```r
@@ -314,4 +307,4 @@ xyplot(four$avg~four$interval|daycats, data = four, layout=c(1,2), type="l",
        main = "Average number of steps on 5-minute interval, \naveraged across all weekdays or weekend")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16-1.png)
